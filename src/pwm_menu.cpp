@@ -4,6 +4,8 @@
 #include "menu.h"
 #include "pwm_menu.h"
 
+#define TEST 0
+
 void pump1_setting_exc(Menu *menu)
 {
     static bool setting_flag = false;
@@ -1076,7 +1078,6 @@ void status_ecph_control_exc(Menu *menu)
     {
 
         run_control_ecph = true;
-      
     }
     else
     {
@@ -1085,7 +1086,6 @@ void status_ecph_control_exc(Menu *menu)
         timer4->setCaptureCompare(2, 0, PERCENT_COMPARE_FORMAT); // OFF pump2
         timer4->setCaptureCompare(3, 0, PERCENT_COMPARE_FORMAT); // OFF pump3
         timer4->setCaptureCompare(4, 0, PERCENT_COMPARE_FORMAT); // OFF pump4
-     
     }
 }
 
